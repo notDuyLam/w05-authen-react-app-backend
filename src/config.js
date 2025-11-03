@@ -8,7 +8,7 @@ const config = {
   accessTokenTtl: process.env.ACCESS_TOKEN_TTL || "10m",
   refreshTokenTtl: process.env.REFRESH_TOKEN_TTL || "7d",
   cors: {
-    origin: "http://localhost:5173",
+    origin: process.env.FRONTEND_ORIGIN || "http://localhost:5173",
     credentials: false,
   },
 };
