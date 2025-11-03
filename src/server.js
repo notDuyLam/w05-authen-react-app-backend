@@ -10,6 +10,8 @@ const app = express();
 app.use(cors(config.cors));
 app.use(express.json());
 
+app.get("/", (req, res) => res.send("Auth backend is running"));
+
 app.get("/health", (req, res) => res.json({ ok: true }));
 
 app.use("/auth", authRoutes);
